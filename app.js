@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const hbs = require('express-handlebars');
-const {mongodburl} = require('./config/configuration.js');
+const {mongodburl, PORT} = require('./config/configuration.js');
 
 const app = express();
 
@@ -26,11 +26,9 @@ app.engine('handlebars', hbs({defaultLayout:'default' }));
 app.set('view engine', 'handlebars');
 
 // Routes
-app.use('/', (req , res) =>{
-  res.render('default/index');
-});
+const defaultRoutes = require('./routes/defaultRoutes');
+app.use('/', defaultRoutes);
 
-
-app.listen(3002 , () =>{
-  console.log('server running on port 3002');
+app.listen(PORT , () =>{
+  console.log('server running on port', PORT);
 });
