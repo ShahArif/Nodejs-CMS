@@ -1,24 +1,21 @@
 {
-  "name": "nodejs-cms",
-  "version": "1.0.0",
-  "description": "nodejs CMS Application",
+  "name": "cms-tutorial",
+  "version": "1.0.1",
+  "description": "Nodejs CMS Application",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ShahArif/Nodejs-CMS.git"
-  },
-  "author": "Arif Shah",
+  "author": "Indranil Mukherjee",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ShahArif/Nodejs-CMS/issues"
-  },
-  "homepage": "https://github.com/ShahArif/Nodejs-CMS#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.7.4"
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "flash": "^1.1.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.2"
   }
 }
